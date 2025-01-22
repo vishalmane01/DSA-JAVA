@@ -6,20 +6,20 @@
 // Result = 24 - 9 = 15
 public class SumAndProduct {
     public static void main(String[] args){
-        int n = 235;
+        int n = 234;
         int result = CalculateDifference(n);
-        System.out.print(" " + result);
-    }  
-  
+        System.out.println(result);
+    }
+
     public static int CalculateDifference(int n){
         int sum = 0;
         int product = 1;
-        while (n>0){
+        while(n>0){
             int digit = n%10;
             sum += digit;
             product *= digit;
-            n /= 10;
-        }
-        return product - sum;
+            n = n/10;
+
+        } return product - sum;
     }
 }
